@@ -1,3 +1,10 @@
+html, body {
+  scroll-behavior: smooth;
+  scroll-padding: 50px;
+  overflow-x: hidden;
+  background-color: #0B0B0B;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,6 +17,9 @@
           justify-content: center;
   height: 100vh;
   background-color: #0B0B0B;
+  background-position: center;
+  background-size: 75%;
+  background-repeat: no-repeat;
 }
 
 .hero h1 {
@@ -20,11 +30,19 @@
   text-transform: uppercase;
   color: #fff;
   text-align: center;
+  z-index: 1;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
 .about {
   background-color: #0B0B0B;
-  padding: 100px 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about h2 {
@@ -112,7 +130,6 @@
 }
 
 .team {
-  padding: 100px 0;
   background-color: #0B0B0B;
 }
 
@@ -151,6 +168,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .team .accordion__panel .name-container h3 {
@@ -177,11 +196,6 @@
   transition: .3s ease-in-out;
 }
 
-.team .accordion__panel .name-container span.is-open::after {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 .team .accordion__panel__content {
   max-height: 0px;
   -webkit-transition: .3s ease-in-out;
@@ -189,18 +203,38 @@
   overflow: hidden;
 }
 
+.team .accordion__panel__content img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 350px;
+  margin-bottom: 20px;
+}
+
 .team .accordion__panel__content p {
   color: #fff;
   font-family: 'Manrope', sans-serif;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 30px;
 }
 
 .team .accordion__panel.panel-open .accordion__panel__content {
-  max-height: 200px;
+  max-height: 500px;
+}
+
+.team .accordion__panel.panel-open .name-container {
+  margin-bottom: 40px;
+}
+
+.team .accordion__panel.panel-open span::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 footer {
+  margin-top: 200px;
   height: 75vh;
   background-color: #38B000;
 }

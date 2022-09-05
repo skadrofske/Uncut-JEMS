@@ -2,6 +2,13 @@ $primary-color: #0B0B0B;
 $secondary-color: #fff;
 $third-color: #38B000;
 
+html,body {
+    scroll-behavior: smooth;
+    scroll-padding: 50px;
+    overflow-x: hidden;
+    background-color: $primary-color;
+}
+
 .hero {
 
     display: flex;
@@ -9,6 +16,9 @@ $third-color: #38B000;
     justify-content: center;
     height: 100vh;
     background-color: $primary-color;
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
 
     h1 {
         font-family: 'Manrope', sans-serif;
@@ -18,13 +28,17 @@ $third-color: #38B000;
         text-transform: uppercase;
         color: $secondary-color;
         text-align: center;
+        z-index: 1;
+        text-shadow: (0px 0px 10px rgba(0, 0, 0, .25));
     }
 }
 
 .about {
 
     background-color: $primary-color;
-    padding: 100px 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 
     h2 {
         font-size: 20px;
@@ -105,7 +119,6 @@ $third-color: #38B000;
 }
 
 .team {
-    padding: 100px 0;
     background-color: $primary-color;
 
     h2 {
@@ -137,6 +150,7 @@ $third-color: #38B000;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                transition: .3s ease-in-out;
 
                 h3 {
                     color: $secondary-color;
@@ -158,10 +172,6 @@ $third-color: #38B000;
                         transform: rotate(90deg);
                         transition: .3s ease-in-out;
                     }
-
-                    &.is-open::after {
-                        transform: rotate(90deg);
-                    }
                 }
             }
 
@@ -170,22 +180,40 @@ $third-color: #38B000;
                 transition: .3s ease-in-out;
                 overflow: hidden;
 
+                img {
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 350px;
+                    margin-bottom: 20px;
+                }
+
                 p {
                     color: $secondary-color;
                     font-family: 'Manrope', sans-serif;
                     font-size: 20px;
-                    line-height: 20px;
+                    line-height: 30px;
                 }
             }
 
             &.panel-open .accordion__panel__content {
-                max-height: 200px;
+                max-height: 500px;
+            }
+
+            &.panel-open .name-container {
+                margin-bottom: 40px;
+            }
+
+
+            &.panel-open span::after {
+                transform: rotate(180deg);
             }
         }
     }
 }
 
 footer {
+    margin-top: 200px;
     height: 75vh;
     background-color: $third-color;
 
