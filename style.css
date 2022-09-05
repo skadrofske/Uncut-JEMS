@@ -1,1 +1,115 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 9vw;
+  font-weight: bold;
+  line-height: 9vw;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.about {
+  background-color: #000;
+}
+
+.about h2 {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: 'Manrope', sans-serif;
+  color: #00c0da;
+}
+
+.about h3 {
+  font-size: 90px;
+  line-height: 96px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.about p {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: 'Manrope', sans-serif;
+  color: #fff;
+}
+
+.cta {
+  border: 3px solid #fff;
+  border-radius: 10px;
+  height: 50px;
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  margin-top: 50px;
+}
+
+.cta a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 20px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.cta a:hover {
+  color: #000;
+}
+
+.cta:hover {
+  background-color: #fff;
+}
+
+a {
+  color: #fff;
+  font-size: 20px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  text-transform: uppercase;
+}
+
+a i {
+  margin-left: 10px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+a:hover {
+  color: #00c0da;
+}
+
+a:hover i {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+footer {
+  height: 100vh;
+  background-color: #000;
+}
+/*# sourceMappingURL=style.css.map */

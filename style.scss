@@ -1,0 +1,103 @@
+$primary-color: #000;
+$secondary-color: #fff;
+$third-color: rgb(0, 192, 218);
+
+.hero {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: $primary-color;
+
+    h1 {
+        font-family: 'Manrope', sans-serif;
+        font-size: 9vw;
+        font-weight: bold;
+        line-height: 9vw;
+        text-transform: uppercase;
+        color: $secondary-color;
+    }
+}
+
+.about {
+
+    background-color: $primary-color;
+
+    h2 {
+        font-size: 20px;
+        line-height: 20px;
+        font-family: 'Manrope', sans-serif;
+        color: $third-color;
+    }
+
+    h3 {
+        font-size: 90px;
+        line-height: 96px;
+        font-family: 'Manrope', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $secondary-color;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 20px;
+        font-family: 'Manrope', sans-serif;
+        color: $secondary-color;
+    }
+}
+
+.cta {
+    border: 3px solid $secondary-color;
+    border-radius: 10px;
+    height: 50px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in-out;
+    margin-top: 50px;
+
+    a {
+        color: $secondary-color;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 20px;
+        transition: .3s ease-in-out;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
+
+a {
+    color: $secondary-color;
+    font-size: 20px;
+    transition: .3s ease-in-out;
+    text-transform: uppercase;
+
+    i {
+        margin-left: 10px;
+        transition: .3s ease-in-out;
+    }
+
+    &:hover {
+        color: $third-color;
+    }
+
+    &:hover i{
+        transform: translateX(10px);
+    }
+}
+
+footer {
+    height: 100vh;
+    background-color: $primary-color;
+}
