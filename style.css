@@ -111,6 +111,95 @@
   color: #0B0B0B;
 }
 
+.team {
+  padding: 100px 0;
+  background-color: #0B0B0B;
+}
+
+.team h2 {
+  font-size: 90px;
+  line-height: 96px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #38B000;
+}
+
+.team .accordion {
+  background-color: #0B0B0B;
+  margin-top: 50px;
+}
+
+.team .accordion__panel {
+  cursor: pointer;
+  padding: 25px 0;
+  border-top: 3px solid #fff;
+}
+
+.team .accordion__panel:last-child {
+  border-bottom: 3px solid #fff;
+}
+
+.team .accordion__panel .name-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team .accordion__panel .name-container h3 {
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+}
+
+.team .accordion__panel .name-container span {
+  width: 25px;
+  height: 3px;
+  display: block;
+  background-color: #fff;
+}
+
+.team .accordion__panel .name-container span::after {
+  content: "";
+  width: 25px;
+  height: 3px;
+  display: block;
+  background-color: #fff;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.team .accordion__panel .name-container span.is-open::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.team .accordion__panel__content {
+  max-height: 0px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  overflow: hidden;
+}
+
+.team .accordion__panel__content p {
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.team .accordion__panel.panel-open .accordion__panel__content {
+  max-height: 200px;
+}
+
 footer {
   height: 75vh;
   background-color: #38B000;
@@ -144,6 +233,7 @@ footer .grid-container .line {
   width: 100%;
   height: 3px;
   background-color: #0B0B0B;
+  margin-bottom: 10px;
 }
 
 footer .grid-container .space-between {

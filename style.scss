@@ -104,6 +104,87 @@ $third-color: #38B000;
     }
 }
 
+.team {
+    padding: 100px 0;
+    background-color: $primary-color;
+
+    h2 {
+        font-size: 90px;
+        line-height: 96px;
+        font-family: 'Manrope', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $third-color;
+    }
+
+    .accordion {
+
+        background-color: $primary-color;
+        margin-top: 50px;
+
+        &__panel {
+            cursor: pointer;
+            padding: 25px 0;
+            border-top: 3px solid $secondary-color;
+
+            &:last-child {
+                border-bottom: 3px solid $secondary-color;
+            }
+
+            .name-container {
+
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h3 {
+                    color: $secondary-color;
+                    font-family: 'Manrope', sans-serif;
+                }
+
+                span {
+                    width: 25px;
+                    height: 3px;
+                    display: block;
+                    background-color: $secondary-color;
+
+                    &::after {
+                        content: "";
+                        width: 25px;
+                        height: 3px;
+                        display: block;
+                        background-color: $secondary-color;
+                        transform: rotate(90deg);
+                        transition: .3s ease-in-out;
+                    }
+
+                    &.is-open::after {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+            &__content {
+                max-height: 0px;
+                transition: .3s ease-in-out;
+                overflow: hidden;
+
+                p {
+                    color: $secondary-color;
+                    font-family: 'Manrope', sans-serif;
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+            }
+
+            &.panel-open .accordion__panel__content {
+                max-height: 200px;
+            }
+        }
+    }
+}
+
 footer {
     height: 75vh;
     background-color: $third-color;
@@ -128,6 +209,7 @@ footer {
             width: 100%;
             height: 3px;
             background-color: $primary-color;
+            margin-bottom: 10px;
         }
 
         .space-between {
