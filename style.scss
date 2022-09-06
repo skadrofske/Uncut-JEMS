@@ -36,9 +36,8 @@ html,body {
 .about {
 
     background-color: $primary-color;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    padding: 300px 0;
+
 
     h2 {
         font-size: 20px;
@@ -85,7 +84,7 @@ html,body {
         height: 65px;
         width: 65px;
         text-align: center;
-        border: 1px solid $secondary-color;
+        border: 3px solid $secondary-color;
         transition: .3s ease-in-out;
         border-radius: 50px;
         display: flex;
@@ -194,7 +193,13 @@ html,body {
             }
 
             &.panel-open .accordion__panel__content {
-                max-height: 500px;
+                max-height: 500px;       
+            }
+
+            @media only screen and (max-width: 600px) {
+                &.panel-open .accordion__panel__content {
+                    max-height: 1000px;       
+                }
             }
 
             &.panel-open .name-container {
